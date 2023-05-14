@@ -3,25 +3,25 @@ import pickle
 from PIL import Image
 
 def main():
-    background="""  <div style='background-color:black; padding:13px'>
+    background="""  <div style='background-color:#2a3b9c; padding:13px'>
                     <h1 style='color:white'>Model Deployment hotel customer booking status</h1>
                     <h2 style='color:white'>By: Rasyadan, Firmania, Adhea, Reynaldy</h2>
                     </div> """
     st.markdown(background,unsafe_allow_html=True)
     left,right=st.columns((2,2))
-    customer = left.number_input('Total Customer')
-    weekend_night = right.number_input('Weekend Night')
-    week_night = left.number_input('Week Night')
+    customer = left.number_input('Total Customer',value=0)
+    weekend_night = right.number_input('Weekend Night',value=0)
+    week_night = left.number_input('Week Night',value=0)
     meal_type = right.selectbox('Meal Type',('Not Selected','Meal Plan 1','Meal Plan 2','Meal Plan 3'))
     car_parking = left.selectbox('Require Parking Car',('Yes','No'))
     room_type = right.selectbox('Room Type',('RoomType1','RoomType2','RoomType3','RoomType4','RoomType5','RoomType6','RoomType7'))
-    lead = left.number_input('Lead Time')
+    lead = left.number_input('Lead Time',value=0)
     market_segment = right.selectbox('Market Segment',('Aviation','Complementary','Corporate','Offline','Online'))
     repeated_guest = left.selectbox('Repeated Guest',('Yes','No'))
-    previous_cancel = right.number_input('Total Previous Canceled')
-    previous_booking = left.number_input('Total Previous Booking')
+    previous_cancel = right.number_input('Total Previous Canceled',value=0)
+    previous_booking = left.number_input('Total Previous Booking',value=0)
     avg_price = right.number_input('Average Price Per Room')
-    special_guest = left.number_input('Total Special Guest')
+    special_guest = left.number_input('Total Special Guest',value=0)
     button = st.button('Predict')
     if meal_type == 'Not Selected':
         meal = 3
