@@ -41,11 +41,11 @@ def main():
         if result == 'Not Cancel':
             img_not_cancel = Image.open('Image/Not Cancel.png')
             st.image(img_not_cancel)
-            st.success(f'This Customer Will {result} his hotel order')
+            st.success(f'This Customer Will {result} his reservation')
         else:
             img_cancel = Image.open('Image/Cancel.png')
             st.image(img_cancel)
-            st.success(f'This Customer Will {result} his hotel order')
+            st.success(f'This Customer Will {result} his reservation')
 
 
 with open('Model/random_forest_mode.pkl','rb') as file1:
