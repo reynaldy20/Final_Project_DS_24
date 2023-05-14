@@ -14,7 +14,7 @@ def main():
     week_night = left.number_input('Week Night',value=0)
     meal_type = right.selectbox('Meal Type',('Not Selected','Meal Plan 1','Meal Plan 2','Meal Plan 3'))
     car_parking = left.selectbox('Require Parking Car',('Yes','No'))
-    room_type = right.selectbox('Room Type',('RoomType1','RoomType2','RoomType3','RoomType4','RoomType5','RoomType6','RoomType7'))
+    room_type = right.selectbox('Room Type',('Room Type 1','Room Type 2','Room Type 3','Room Type 4','Room Type 5','Room Type 6','Room Type 7'))
     lead = left.number_input('Lead Time',value=0)
     market_segment = right.selectbox('Market Segment',('Aviation','Complementary','Corporate','Offline','Online'))
     repeated_guest = left.selectbox('Repeated Guest',('Yes','No'))
@@ -32,7 +32,7 @@ def main():
     else :
         meal=2
     park = 0 if car_parking == 'No' else 1
-    room = 0 if room_type == 'RoomType1' else 1 if room_type == 'RoomType2' else 2 if room_type == 'RoomType3' else 3 if room_type == 'RoomType4' else 4 if room_type == 'RoomType5' else 5 if room_type == 'RoomType6' else 6
+    room = 0 if room_type == 'Room Type 1' else 1 if room_type == 'Room Type 2' else 2 if room_type == 'Room Type 3' else 3 if room_type == 'Room Type 4' else 4 if room_type == 'Room Type 5' else 5 if room_type == 'Room Type 6' else 6
     market = 0 if market_segment == 'Aviation' else 1 if market_segment == 'Complementary' else 2 if market_segment == 'Corporate' else 3 if market_segment == 'Offline' else 4
     rep = 0 if repeated_guest == 'No' else 1
     if button:
